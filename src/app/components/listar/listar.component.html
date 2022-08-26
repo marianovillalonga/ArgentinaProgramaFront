@@ -1,0 +1,35 @@
+<app-header></app-header>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="titulo">LISTADO DE PAGINAS</span>
+                    <button class="btn btn-success float-end" routerLink="/crear">NUEVO</button>
+                    <table *ngIf="listPaginas.length > 0" class="table table-striped mt-3">
+                        <thead>
+                          <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Pagina</th>
+                            <th scope="col">Repositorio</th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let pagina of listPaginas">
+                            <td>{{ pagina.nombre }}</td>
+                            <td>{{ pagina.web }}</td>
+                            <td>{{ pagina.repositorio }}</td>
+                            <td>
+                                <i [routerLink]="['/editar-pagina', pagina._id]" class="fas fa-edit text-primary"></i>
+                                <i (click)="eliminarPagina(pagina._id)" class="fas fa-trash text-danger"></i>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <h5 style="text-align: start; margin-top: 10px;" *ngIf="listPaginas.length == 0">No hay paginas para mostrar</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

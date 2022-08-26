@@ -1,0 +1,94 @@
+.wrapper{
+    width: 100%;
+    height: 20vh;
+    background-color: #191c32;
+    color: #fff;
+}
+
+.brand{
+    margin-top: -7px;
+}
+
+.brand span{
+    color: aqua;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+}
+
+.menu{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+
+.menu li{
+    list-style: none;
+}
+
+.menu a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.menu a:hover{
+    background-color: aqua;
+    color: #191c32;
+    transition: ease-in 0.5s;
+    border-radius: 20px;
+}
+
+.menu .active{
+    color: aqua;
+}
+
+/* Mediaquery respons */
+@media screen and (max-width: 768px){
+    .wrapper{
+        height: auto;
+    }
+    .brand{
+        margin-top: 0;
+    }
+    .navbar{
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+    .menu{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .menu li{
+        list-style: none;
+    }
+    .menu a{
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+    }
+    .menu a:hover{
+        background-color: aqua;
+        color: #191c32;
+        transition: ease-in 0.5s;
+        border-radius: 20px;
+    }
+    .menu .active{
+        color: aqua;
+    }
+}
+
+
+@media screen and (max-width: 400px){
+    /* menu hamburguesa */
+    .menu{
+        display: none;
+    }
+}

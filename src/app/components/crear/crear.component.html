@@ -1,0 +1,42 @@
+<app-header></app-header>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="titulo"> {{ titulo | uppercase }}</span>
+                    <form class="mt-3" [formGroup]="paginaForm" (ngSubmit)="agregarPagina()">
+                        <div class="mb-3">
+                            <input type="text" formControlName="nombre" class="form-control form-control-lg"
+                                placeholder="Nombre">
+                            <div class="text-danger"
+                                *ngIf="paginaForm.get('nombre')?.hasError('required') && paginaForm.get('nombre')?.touched">
+                                <span>El nombre del nombre <strong>es obligatorio</strong></span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" formControlName="web" class="form-control form-control-lg"
+                                placeholder="Web">
+                            <div class="text-danger"
+                                *ngIf="paginaForm.get('web')?.hasError('required') && paginaForm.get('web')?.touched">
+                                <span>La pagina <strong>es obligatoria</strong></span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" formControlName="repositorio" class="form-control form-control-lg"
+                                placeholder="Repositorio">
+                            <div class="text-danger"
+                                *ngIf="paginaForm.get('repositorio')?.hasError('required') && paginaForm.get('repositorio')?.touched">
+                                <span>El repositorio <strong>es obligatoria</strong></span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <button routerLink="/listar" class="btn btn-secondary btn-lg float-start">VOLVER</button>
+                            <button type="submit" [disabled]="paginaForm.invalid" class="btn btn-success btn-lg float-end">ACEPTAR</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

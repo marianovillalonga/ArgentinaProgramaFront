@@ -1,0 +1,32 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 200px;
+    background-color: #191c32;
+    color: #fff;
+}
+
+.footer-content h2{
+    font-size: 3em;
+}
+
+.footer-content h5{
+    font-size: 1.5em;
+}
+
+.sotial-network{
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+    margin-top: 1em;
+}
+
+.sotial-network i{
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+    margin-top: 1em;
+}
